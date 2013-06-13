@@ -6,7 +6,5 @@ end
 post '/color' do
 
   #Create and return a JSON object with the random cell and color given below.
-
-  cell= rand(1..9)
-  color= "#" + "%06x" % (rand * 0xffffff)
+  json = { "cell" => rand(1..9), "color" => color= "#" + "%06x" % (rand * 0xffffff) }.to_json
 end
